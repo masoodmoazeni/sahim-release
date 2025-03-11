@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Walrus.Apart.Presentation</name>
+    </assembly>
+    <members>
+        <member name="M:Walrus.Apart.Presentation.Controllers.Home.CategoryController.ResizeImage(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            تغییر اندازه تصویر بدون کاهش کیفیت
+            </summary>
+        </member>
+        <member name="M:Walrus.Apart.Presentation.Controllers.Home.SettingController.ResizeImage(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            تغییر اندازه تصویر بدون کاهش کیفیت
+            </summary>
+        </member>
+        <member name="T:Walrus.Apart.Presentation.Controllers.v1.PackageController">
+                 هر ساختمانی یک پکیج دارد برای خودش 
+                یا از پکیج های پیش فرض استفاده میکند 
+                و اگر میخحواست دوباره خرید کند بهش اجازه ندهد یا باید به دفتر تماس بگیرد تا با پرداخت هزینه به
+                صورت اختصاصی بهش پکیج تعلق بگیرد
+        </member>
+        <member name="M:Walrus.Apart.Presentation.Controllers.v1.TokenController.GetToken(MyApi.Models.TokenRequest,System.Threading.CancellationToken)">
+            <summary>
+            This method generate JWT Token
+            </summary>
+            <param name="tokenRequest">The information of token request</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Walrus.Apart.Presentation.Controllers.v1.WithdrawController.ResizeImage(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            تغییر اندازه تصویر بدون کاهش کیفیت
+            </summary>
+        </member>
+    </members>
+</doc>
