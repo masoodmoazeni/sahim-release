@@ -9,6 +9,11 @@
             تغییر اندازه تصویر بدون کاهش کیفیت
             </summary>
         </member>
+        <member name="M:Walrus.Apart.Presentation.Controllers.Home.QuestionController.ResizeImage(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            تغییر اندازه تصویر بدون کاهش کیفیت
+            </summary>
+        </member>
         <member name="M:Walrus.Apart.Presentation.Controllers.Home.SettingController.ResizeImage(System.Drawing.Image,System.Int32,System.Int32)">
             <summary>
             تغییر اندازه تصویر بدون کاهش کیفیت
