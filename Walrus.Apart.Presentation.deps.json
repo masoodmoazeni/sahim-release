@@ -26,6 +26,7 @@
           "NetTopologySuite.IO": "1.14.0.1",
           "NetTopologySuite.IO.GeoJSON": "4.0.0",
           "Newtonsoft.Json": "13.0.3",
+          "RandomString4Net": "1.9.0",
           "Sentry.NLog": "4.9.0",
           "Walrus.Apart.WebInfra": "1.0.0"
         },
@@ -1400,6 +1401,14 @@
           "lib/netstandard2.0/Pluralize.NET.dll": {
             "assemblyVersion": "1.0.2.0",
             "fileVersion": "1.0.2.0"
+          }
+        }
+      },
+      "RandomString4Net/1.9.0": {
+        "runtime": {
+          "lib/net8.0/RandomString4Net.dll": {
+            "assemblyVersion": "1.9.0.0",
+            "fileVersion": "1.9.0.0"
           }
         }
       },
@@ -2884,6 +2893,13 @@
       "sha512": "sha512-kr/sOAem5NPH7Ft0tNiaQOO7f/W7ExcLRERpgvg5BlVZimQ/d/MCxhnwnk+WL4dy5Bj/KjToHUl1azYYDfqzpA==",
       "path": "pluralize.net/1.0.2",
       "hashPath": "pluralize.net.1.0.2.nupkg.sha512"
+    },
+    "RandomString4Net/1.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yj5tz05sIz8oXfVOhsDg0S9Mpj7/g/xC3EsXZnKrPHF3swg1n7cplBhdhlNCBnBSOGbVpMK17c0N1oHjgowdhw==",
+      "path": "randomstring4net/1.9.0",
+      "hashPath": "randomstring4net.1.9.0.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
