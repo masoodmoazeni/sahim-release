@@ -15,8 +15,6 @@ var KTCustomersList = function () {
 
         tableRows.forEach(row => {
             const dateRow = row.querySelectorAll('td');
-            const realDate = moment(dateRow[6].innerHTML, "DD MMM YYYY, LT").format(); // select date from 5th column in table
-            dateRow[5].setAttribute('data-order', realDate);
         });
 
         // Init datatable --- more info on datatables: https://datatables.net/manual/
@@ -25,7 +23,6 @@ var KTCustomersList = function () {
             'order': [],
             'columnDefs': [
                 { orderable: false, targets: 0 }, // Disable ordering on column 0 (checkbox)
-                { orderable: false, targets: 7 }, // Disable ordering on column 6 (actions)
             ],
             "language": {
                 "paginate": {
@@ -88,9 +85,81 @@ var KTCustomersList = function () {
         });
     }
 
-    
+    // Delete customer
+    var handleDeleteRows = () => {
+        // Select all delete buttons
+        const deleteButtons = table.querySelectorAll('[data-kt-customer-table-filter="delete_row"]');
 
-    
+        deleteButtons.forEach(d => {
+            // Delete button on click
+            d.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Select parent row
+                const parent = e.target.closest('tr');
+
+                // Get customer name
+                const customerName = parent.querySelectorAll('td')[1].innerText;
+
+                // SweetAlert2 pop up --- official docs reference: https://sweetalert2.github.io/
+                Swal.fire({
+                    text: "Are you sure you want to delete " + customerName + "?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    buttonsStyling: false,
+                    confirmButtonText: "Yes, delete!",
+                    cancelButtonText: "No, cancel",
+                    customClass: {
+                        confirmButton: "btn fw-bold btn-danger",
+                        cancelButton: "btn fw-bold btn-active-light-primary"
+                    }
+                }).then(function (result) {
+                    if (result.value) {
+                        Swal.fire({
+                            text: "You have deleted " + customerName + "!.",
+                            icon: "success",
+                            buttonsStyling: false,
+                            confirmButtonText: "Ok, got it!",
+                            customClass: {
+                                confirmButton: "btn fw-bold btn-primary",
+                            }
+                        }).then(function () {
+                            // Remove current row
+                            datatable.row($(parent)).remove().draw();
+                        });
+                    } else if (result.dismiss === 'cancel') {
+                        Swal.fire({
+                            text: customerName + " was not deleted.",
+                            icon: "error",
+                            buttonsStyling: false,
+                            confirmButtonText: "Ok, got it!",
+                            customClass: {
+                                confirmButton: "btn fw-bold btn-primary",
+                            }
+                        });
+                    }
+                });
+            })
+        });
+    }
+
+    // Reset Filter
+    var handleResetForm = () => {
+        // Select reset button
+        const resetButton = document.querySelector('[data-kt-customer-table-filter="reset"]');
+
+        // Reset datatable
+        resetButton.addEventListener('click', function () {
+            // Reset month
+            filterMonth.val(null).trigger('change');
+
+            // Reset payment type
+            filterPayment[0].checked = true;
+
+            // Reset datatable --- official docs reference: https://datatables.net/reference/api/search()
+            datatable.search('').draw();
+        });
+    }
 
     // Init toggle toolbar
     var initToggleToolbar = () => {
@@ -111,6 +180,55 @@ var KTCustomersList = function () {
             });
         });
 
+        // Deleted selected rows
+        deleteSelected.addEventListener('click', function () {
+            // SweetAlert2 pop up --- official docs reference: https://sweetalert2.github.io/
+            Swal.fire({
+                text: "Are you sure you want to delete selected customers?",
+                icon: "warning",
+                showCancelButton: true,
+                buttonsStyling: false,
+                confirmButtonText: "Yes, delete!",
+                cancelButtonText: "No, cancel",
+                customClass: {
+                    confirmButton: "btn fw-bold btn-danger",
+                    cancelButton: "btn fw-bold btn-active-light-primary"
+                }
+            }).then(function (result) {
+                if (result.value) {
+                    Swal.fire({
+                        text: "You have deleted all selected customers!.",
+                        icon: "success",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn fw-bold btn-primary",
+                        }
+                    }).then(function () {
+                        // Remove all selected customers
+                        checkboxes.forEach(c => {
+                            if (c.checked) {
+                                datatable.row($(c.closest('tbody tr'))).remove().draw();
+                            }
+                        });
+
+                        // Remove header checked box
+                        const headerCheckbox = table.querySelectorAll('[type="checkbox"]')[0];
+                        headerCheckbox.checked = false;
+                    });
+                } else if (result.dismiss === 'cancel') {
+                    Swal.fire({
+                        text: "Selected customers was not deleted.",
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn fw-bold btn-primary",
+                        }
+                    });
+                }
+            });
+        });
     }
 
     // Toggle toolbars
@@ -150,7 +268,7 @@ var KTCustomersList = function () {
     return {
         init: function () {
             table = document.querySelector('#kt_customers_table');
-            
+
             if (!table) {
                 return;
             }
