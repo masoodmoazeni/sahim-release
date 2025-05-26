@@ -15,8 +15,10 @@
           "AutoMapper": "13.0.1",
           "DevExpress.Xpo": "22.2.6",
           "EFCore.AutomaticMigrations.NetTopologySuite": "7.0.5",
+          "FirebaseAdmin": "3.2.0",
           "GeoJSON.Net": "1.4.1",
           "GeoJSON.Net.Contrib.EntityFramework": "0.1.7",
+          "Google.Apis.Auth": "1.69.0",
           "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore.Design": "8.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
@@ -270,16 +272,16 @@
           }
         }
       },
-      "FirebaseAdmin/3.0.0": {
+      "FirebaseAdmin/3.2.0": {
         "dependencies": {
           "Google.Api.Gax.Rest": "4.8.0",
-          "Google.Apis.Auth": "1.67.0",
+          "Google.Apis.Auth": "1.69.0",
           "System.Collections.Immutable": "8.0.0"
         },
         "runtime": {
           "lib/net6.0/FirebaseAdmin.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
           }
         }
       },
@@ -340,7 +342,7 @@
       "Google.Api.Gax.Rest/4.8.0": {
         "dependencies": {
           "Google.Api.Gax": "4.8.0",
-          "Google.Apis.Auth": "1.67.0",
+          "Google.Apis.Auth": "1.69.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
         },
         "runtime": {
@@ -350,38 +352,38 @@
           }
         }
       },
-      "Google.Apis/1.67.0": {
+      "Google.Apis/1.69.0": {
         "dependencies": {
-          "Google.Apis.Core": "1.67.0"
+          "Google.Apis.Core": "1.69.0"
         },
         "runtime": {
           "lib/net6.0/Google.Apis.dll": {
-            "assemblyVersion": "1.67.0.0",
-            "fileVersion": "1.67.0.0"
+            "assemblyVersion": "1.69.0.0",
+            "fileVersion": "1.69.0.0"
           }
         }
       },
-      "Google.Apis.Auth/1.67.0": {
+      "Google.Apis.Auth/1.69.0": {
         "dependencies": {
-          "Google.Apis": "1.67.0",
-          "Google.Apis.Core": "1.67.0",
+          "Google.Apis": "1.69.0",
+          "Google.Apis.Core": "1.69.0",
           "System.Management": "7.0.2"
         },
         "runtime": {
           "lib/net6.0/Google.Apis.Auth.dll": {
-            "assemblyVersion": "1.67.0.0",
-            "fileVersion": "1.67.0.0"
+            "assemblyVersion": "1.69.0.0",
+            "fileVersion": "1.69.0.0"
           }
         }
       },
-      "Google.Apis.Core/1.67.0": {
+      "Google.Apis.Core/1.69.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "lib/net6.0/Google.Apis.Core.dll": {
-            "assemblyVersion": "1.67.0.0",
-            "fileVersion": "1.67.0.0"
+            "assemblyVersion": "1.69.0.0",
+            "fileVersion": "1.69.0.0"
           }
         }
       },
@@ -3132,7 +3134,7 @@
       "Walrus.Apart.Services/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
-          "FirebaseAdmin": "3.0.0",
+          "FirebaseAdmin": "3.2.0",
           "Kavenegar.NetCore": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
@@ -3183,9 +3185,10 @@
           "EFCore.AutomaticMigrations.NetTopologySuite": "7.0.5",
           "ElmahCore": "2.1.2",
           "ElmahCore.Sql": "2.1.2",
-          "FirebaseAdmin": "3.0.0",
+          "FirebaseAdmin": "3.2.0",
           "GeoJSON.Net": "1.4.1",
           "GeoJSON.Net.Contrib.EntityFramework": "0.1.7",
+          "Google.Apis.Auth": "1.69.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.7",
           "Microsoft.AspNetCore.Authorization": "8.0.7",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.7",
@@ -3338,12 +3341,12 @@
       "path": "entityframework/6.1.3",
       "hashPath": "entityframework.6.1.3.nupkg.sha512"
     },
-    "FirebaseAdmin/3.0.0": {
+    "FirebaseAdmin/3.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6aNnm+RzH3ZQEprwDfJui83edH0M3ydbqx0zOCdc1ZaVyDuXB5bYhuh6dVPCHEhb8zeL+ZNySpx0cZDWJk8/vw==",
-      "path": "firebaseadmin/3.0.0",
-      "hashPath": "firebaseadmin.3.0.0.nupkg.sha512"
+      "sha512": "sha512-689HWz59pmUQVJY3YJd7rsevICX8KL2qQX23XyHIp2+Qek9IScgL6T/AnyHF6WMirXll2tULRe+LGOItj7kF6A==",
+      "path": "firebaseadmin/3.2.0",
+      "hashPath": "firebaseadmin.3.2.0.nupkg.sha512"
     },
     "GeoAPI.Core/1.7.5": {
       "type": "package",
@@ -3387,26 +3390,26 @@
       "path": "google.api.gax.rest/4.8.0",
       "hashPath": "google.api.gax.rest.4.8.0.nupkg.sha512"
     },
-    "Google.Apis/1.67.0": {
+    "Google.Apis/1.69.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XM8/fViJaB1pN61OdXy5RMZoQEqd3hKlWvA/K431gFSb5XtQ48BynfgrbBkUtFcPbSRa4BdjBHzSbkBh/skyMg==",
-      "path": "google.apis/1.67.0",
-      "hashPath": "google.apis.1.67.0.nupkg.sha512"
+      "sha512": "sha512-1TfjsXFejwIf7iWaE7A0FbnOEsk8FPlbdFAt1r+I8aSMQfLLdSVWCLdZz6TzuWVwoCGEuJUHTZ/FXdptdU3qWw==",
+      "path": "google.apis/1.69.0",
+      "hashPath": "google.apis.1.69.0.nupkg.sha512"
     },
-    "Google.Apis.Auth/1.67.0": {
+    "Google.Apis.Auth/1.69.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Bs9BlbZ12Y4NXzMONjpzQhZr9VbwLUTGMHkcQRF36aYnk2fYrmj5HNVNh7PPHDDq1fcEQpCtPic2nSlpYQLKXw==",
-      "path": "google.apis.auth/1.67.0",
-      "hashPath": "google.apis.auth.1.67.0.nupkg.sha512"
+      "sha512": "sha512-ar07yxn/s41jdqQ3sMh8EAehiSvXQ9yE1MS4McmZINeSWvolnLHmIZ9Yxj4tHVIYYz0c7H/lpToVqm7C2aYx9g==",
+      "path": "google.apis.auth/1.69.0",
+      "hashPath": "google.apis.auth.1.69.0.nupkg.sha512"
     },
-    "Google.Apis.Core/1.67.0": {
+    "Google.Apis.Core/1.69.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IPq0I3B01NYZraPoMl8muELFLg4Vr2sbfyZp4PR2Xe3MAhHkZCiKyV28Yh1L14zIKUb0X0snol1sR5/mx4S6Iw==",
-      "path": "google.apis.core/1.67.0",
-      "hashPath": "google.apis.core.1.67.0.nupkg.sha512"
+      "sha512": "sha512-SXUcurNUPxYMtOnawvB2Av18VrPBC9W7So9q9ikmXIXLGiv4RX7Zbu4kc+8PbwTdd8wLt54r0PBGOT5RaKoTjQ==",
+      "path": "google.apis.core/1.69.0",
+      "hashPath": "google.apis.core.1.69.0.nupkg.sha512"
     },
     "Gridify/2.14.2": {
       "type": "package",
